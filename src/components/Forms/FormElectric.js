@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Home from '../../pages/Home/Home';
 import './Form.css';
-import FormSignup from './FormEdata';
+import FormSignup from './ElectricData';
 import electric from '../../images/electric.jpg'
 const Form = ({toggleModal, onSave}) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -11,6 +11,7 @@ const Form = ({toggleModal, onSave}) => {
     setIsSubmitted(true);
     toggleModal()
   }
+ 
 
   return (
     <>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Home from '../../pages/Home/Home';
 import './Form.css';
-import FormGdata from './FormGdata';
+import FormGdata from './GasData';
 import gas from '../../images/gas.jpg'
 const FormGas = ({toggleModal, onSave}) => {
   const [isSubmitted, setIsSubmitted] = useState(false);

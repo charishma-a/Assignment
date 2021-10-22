@@ -44,7 +44,36 @@ const CloseModalButton = styled(MdClose)`
   padding: 0;
   z-index: 10;
 `;
-
+const CancelButton = styled.button`
+    width: 80%;
+    height: 50px;
+    margin-top: 450px; 
+    border-radius: 2px;
+    z-index: 100;
+    background: linear-gradient(
+      90deg,
+      rgb(39, 176, 255) 0%,
+      rgb(0, 232, 236) 100%
+    );
+    transition: all 0.4s ease-out;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 1rem;  
+`
+const ButtonWrapper=styled.div`
+    width: 10%;
+    height: 500px;
+    margin-top: 100px;
+    z-index: 100;
+    top: 80%;
+    left: 50%;
+    transform: translate(-200%, 16%);
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  `
 export const HybridModal =({showHModal, setShowHModal, onSave})=>{
   const modalRef = useRef();
   const closeModal = e => {
@@ -61,6 +90,9 @@ export const HybridModal =({showHModal, setShowHModal, onSave})=>{
                </FormHybrid> 
                <CloseModalButton aria-label='Close modal' onClick={()=> setShowHModal
                 (prev=> !prev)}/>
+                 <ButtonWrapper>
+                    <CancelButton type='button' onClick={()=> setShowHModal(prev=> !prev)}>Cancel</CancelButton>
+                    </ButtonWrapper>
         </Background>
         ):null}
         

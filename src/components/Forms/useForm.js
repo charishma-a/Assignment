@@ -13,7 +13,6 @@ const useForm = (callback, validate, type) => {
   });
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const[showModal, setShowModal] = useState(true);
   const handleChange = e => {
     const { name, value } = e.target;
     setValues({
@@ -32,9 +31,6 @@ const useForm = (callback, validate, type) => {
     }    
   };
 
-  const handleCancel = e => {
-      setShowModal(prev=>!prev);
-  }
 
   useEffect(
     () => {
@@ -45,7 +41,7 @@ const useForm = (callback, validate, type) => {
     [errors]
   );
 
-  return { handleChange, handleSubmit, values, errors, handleCancel };
+  return { handleChange, handleSubmit, values, errors };
 };
 
 export default useForm;

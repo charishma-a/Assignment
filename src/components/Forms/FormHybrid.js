@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Home from '../../pages/Home/Home';
 import './Form.css';
-import FormHdata from './FormHdata';
+import FormHdata from './HybridData';
 import hybrid from '../../images/hybrid.jpg'
 
 
